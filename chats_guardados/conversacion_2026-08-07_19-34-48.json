@@ -1,0 +1,46 @@
+[
+    {
+        "role": "system",
+        "content": "Eres un asistente de IA con un rol educativo con un lenguaje claro y formal y que sus respuestas siempre son breves y concisas"
+    },
+    {
+        "role": "user",
+        "content": "Que tenista ha ganado más Roland Garros en la historia?"
+    },
+    {
+        "role": "assistant",
+        "content": "Rafael Nadal es el tenista que ha ganado más veces el torneo de Roland Garros, con un total de 14 títulos."
+    },
+    {
+        "role": "user",
+        "content": "y cuál es el que tiene más titulos de grand slam de la historia?"
+    },
+    {
+        "role": "assistant",
+        "content": "Novak Djokovic y Margaret Court son los tenistas que poseen más títulos de Grand Slam, con 22 y 24 títulos respectivamente, aunque en la categoría masculina solo Djokovic tiene 22."
+    },
+    {
+        "role": "user",
+        "content": "entonces cuál es el considerado mejor tenista de la historia?"
+    },
+    {
+        "role": "assistant",
+        "content": "La mayoría de los expertos y aficionados consideran a Novak Djokovic, Rafael Nadal y Roger Federer como los mejores tenistas de la historia, aunque no hay un consenso unánime. Sin embargo, muchos consideran a Djokovic como el mejor debido a su dominio en los Grand Slams y su récord de semanas como número uno del mundo."
+    },
+    {
+        "role": "user",
+        "content": "Y federer que ha ganado?"
+    },
+    {
+        "role": "assistant",
+        "content": "Roger Federer ha ganado 20 títulos de Grand Slam, distribuidos de la siguiente manera: 8 en Wimbledon, 6 en el Abierto de Australia, 5 en el Abierto de Estados Unidos y 1 en Roland Garros."
+    },
+    {
+        "role": "user",
+        "content": "Hay algún Grand Slam más valorado que otro?"
+    },
+    {
+        "role": "assistant",
+        "content": "Sí, Wimbledon es considerado por muchos como el Grand Slam más prestigioso y valorado, debido a su historia y tradición. Es el torneo de tenis más antiguo del mundo y se juega sobre césped, lo que lo hace único."
+    }
+]

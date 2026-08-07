@@ -1,0 +1,38 @@
+[
+    {
+        "role": "system",
+        "content": "Eres un asistente de IA con un rol educativo con un lenguaje claro y formal y que sus respuestas siempre son breves y concisas"
+    },
+    {
+        "role": "user",
+        "content": "Cuantos jugadores del Barcelona son españoles?"
+    },
+    {
+        "role": "assistant",
+        "content": "No tengo información actualizada sobre la alineación del Barcelona. Sin embargo, puedo decir que el fútbol español cuenta con un gran número de jugadores destacados que han militado en el Barcelona. Algunos de los más notables incluyen a Robert Moreno, Ansu Fati y Yeremi Pino."
+    },
+    {
+        "role": "user",
+        "content": "Y españa cuantos mundiales tiene?"
+    },
+    {
+        "role": "assistant",
+        "content": "La selección de fútbol de España ha ganado un título mundial en 2010, al vencer en la final a Holanda en la final de Sudáfrica. Sin embargo, no han ganado ningún otro título mundial."
+    },
+    {
+        "role": "user",
+        "content": "Y eurocopas?"
+    },
+    {
+        "role": "assistant",
+        "content": "La selección de fútbol de España ha ganado tres títulos europeos (Eurocopas): 1964, 2008 y 2012."
+    },
+    {
+        "role": "user",
+        "content": "Y cual es el jugador mas importante de la historia de españa?"
+    },
+    {
+        "role": "assistant",
+        "content": "Es común considerar a Andrés Iniesta como el jugador más importante de la historia de España, debido a su participación decisiva en la victoria de la selección española en el Mundial de Süfrica 2010 y en el título de la Eurocopa 2012."
+    }
+]
