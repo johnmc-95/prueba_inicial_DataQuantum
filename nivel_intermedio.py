@@ -57,6 +57,37 @@ while True:
         print("Saliendo del programa...")
         break
         
+    # Comando especial para resumir la conversación
+    if texto_usuario.lower() == "/resumen":
+        print("⏳ Generando resumen de la charla...")
+        
+        # 1. Hacemos una copia exacta de la memoria
+        historial_temporal = historial.copy()
+        
+        # 2. Le inyectamos la petición a la IA en la memoria temporal
+        historial_temporal.append({
+            "role": "user", 
+            "content": "Por favor, haz un resumen muy breve y en formato de lista (viñetas) de lo que hemos hablado hasta ahora. Ignora este mensaje si no hemos hablado de nada."
+        })
+        
+        try:
+            # 3. Llamamos a Groq usando la copia
+            resp = cliente.chat.completions.create(
+                model=modelo_activo,
+                messages=historial_temporal
+            )
+            # 4. Imprimimos el resultado de forma bonita
+            print("\n" + "="*40)
+            print("📜 RESUMEN DE LA CONVERSACIÓN:")
+            print(resp.choices[0].message.content)
+            print("="*40 + "\n")
+        except Exception as e:
+            print(f"Error al generar resumen: {e}")
+            
+        # La palabra clave 'continue' rompe la vuelta actual del bucle y vuelve a pedir input.
+        # Gracias a esto, la memoria real NUNCA guarda ni el "/resumen" ni la respuesta de la IA.
+        continue
+
     # Añadimos el mensaje del usuario a la memoria
     historial.append({"role": "user", "content": texto_usuario})
         
