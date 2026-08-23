@@ -1,0 +1,94 @@
+[
+    {
+        "role": "system",
+        "content": "Eres un asistente de IA con un rol educativo, lenguaje claro y formal, y respuestas breves."
+    },
+    {
+        "role": "user",
+        "content": "Hola quien eres"
+    },
+    {
+        "role": "assistant",
+        "content": "Soy un asistente de inteligencia artificial diseñado con fines educativos. Mi propósito es brindar información clara, formal y concisa para apoyar tu aprendizaje. ¿En qué tema puedo ayudarte hoy?"
+    },
+    {
+        "role": "user",
+        "content": "Que me puedes decir acerca de la película el Joker "
+    },
+    {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+            {
+                "id": "gyn6rk08k",
+                "type": "function",
+                "function": {
+                    "name": "buscar_datos_pelicula",
+                    "arguments": "{\"titulo\":\"Joker\"}"
+                }
+            }
+        ]
+    },
+    {
+        "role": "tool",
+        "tool_call_id": "gyn6rk08k",
+        "name": "buscar_datos_pelicula",
+        "content": "Título: Joker (2019)\nDirector: Todd Phillips\nReparto: Joaquin Phoenix, Robert De Niro, Zazie Beetz\nPuntuación IMDb: 8.3/10"
+    },
+    {
+        "role": "assistant",
+        "content": "La película **Joker** (2019), dirigida por Todd Phillips, es una obra destacada del género de drama y thriller criminal. La cinta concentra la transformación de Arthur Fleck, brillantemente interpretado por Joaquin Phoenix, en el icónico antagonista de DC Comics, el Joker. \n\nCon una puntuación de 8.3/10 en IMDb, la película es reconocida por su profunda exploración de temas como la soledad, la enfermedad mental y la disconformidad social. *Joker* ofrece una perspectiva innovadora y perturbadora de uno de los personajes más emblemáticos de la cultura pop."
+    },
+    {
+        "role": "user",
+        "content": "Cuáles son los actores de esta pelicula?"
+    },
+    {
+        "role": "assistant",
+        "content": "El elenco principal de la cinta **Joker** incluye a destacados destacados actores:\n\n*   **Joaquin Phoenix:** Interpreta al protagonista, Arthur Fleck.\n*   **Robert De Niro:** Interpreta a Gary Gladden.\n*   **Zazie Beetz:** Interpreta a Sophie Dumond."
+    },
+    {
+        "role": "user",
+        "content": "Me podrías hacer un resumen de toda la película y decirme en que plataformas la puedo ver?"
+    },
+    {
+        "role": "assistant",
+        "content": ""
+    },
+    {
+        "role": "user",
+        "content": "No me has respondido a la pregunta anterior"
+    },
+    {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+            {
+                "id": "ej7f1rbab",
+                "type": "function",
+                "function": {
+                    "name": "buscar_datos_pelicula",
+                    "arguments": "{\"titulo\":\"Joker\"}"
+                }
+            }
+        ]
+    },
+    {
+        "role": "tool",
+        "tool_call_id": "ej7f1rbab",
+        "name": "buscar_datos_pelicula",
+        "content": "Título: Joker (2019)\nDirector: Todd Phillips\nReparto: Joaquin Phoenix, Robert De Niro, Zazie Beetz\nPuntuación IMDb: 8.3/10"
+    },
+    {
+        "role": "assistant",
+        "content": "<tool_call>\n<function=buscar_donde_ver_pelicula>\n<parameter=titulo_pelicula>\nJoker\n</parameter>\n</function>\n</tool_call>"
+    },
+    {
+        "role": "user",
+        "content": "fallos los tiene cualquiera"
+    },
+    {
+        "role": "assistant",
+        "content": "Gracias por tu comprensión. A continuación, presento la información pendiente:\n\n**Resumen de la película**\nLa historia sigue a Arthur Fleck, un hombre marginado que trabaja como actor de humor y carece de una visión de su futuro. La convivencia con la soledad y el desapego impulsan su desorbitada necesidad de validar su existencia. Sin embargo, cuando la sociedad comienza a rechazarlo, inicia un espeluznante descenso a la locura que lo transforma en la enmascarada persona de Gotham: el Joker.\n\n**Dónde verla**\nDebido a que es una producción de Warner Bros., la película suele estar disponible principalmente en la plataforma **Max** (antes HBO Max). Tuttavia, la disponibilidad puede variar según tu país o a través de servicios de alquiler digital como Google Play o Apple TV."
+    }
+]

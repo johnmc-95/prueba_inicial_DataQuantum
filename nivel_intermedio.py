@@ -1,6 +1,7 @@
 import os
 import time
 import json
+import re
 from datetime import datetime
 from dotenv import load_dotenv
 from groq import Groq
@@ -59,7 +60,7 @@ while True:
         
     # Comando especial para resumir la conversación
     if texto_usuario.lower() == "/resumen":
-        print("⏳ Generando resumen de la charla...")
+        print("⏳ Generando resumen de la conversación...")
         
         # 1. Hacemos una copia exacta de la memoria
         historial_temporal = historial.copy()
@@ -77,9 +78,11 @@ while True:
                 messages=historial_temporal
             )
             # 4. Imprimimos el resultado de forma bonita
+            texto_resumen = resp.choices[0].message.content
+            texto_resumen_limpio = re.sub(r'<think>.*?</think>\n*', '', texto_resumen, flags=re.DOTALL).strip()
             print("\n" + "="*40)
             print("📜 RESUMEN DE LA CONVERSACIÓN:")
-            print(resp.choices[0].message.content)
+            print(texto_resumen_limpio)
             print("="*40 + "\n")
         except Exception as e:
             print(f"Error al generar resumen: {e}")
@@ -104,9 +107,10 @@ while True:
         
         # Extracción y guardado de la respuesta de la IA en la memoria
         texto_respuesta = respuesta.choices[0].message.content
-        historial.append({"role": "assistant", "content": texto_respuesta})
+        texto_respuesta_limpio = re.sub(r'<think>.*?</think>\n*', '', texto_respuesta, flags=re.DOTALL).strip()
+        historial.append({"role": "assistant", "content": texto_respuesta_limpio})
         
-        print("IA:", texto_respuesta)
+        print("IA:", texto_respuesta_limpio)
         print(f"\n⏱️ (Tiempo: {duracion:.2f}s)")
         print("-" * 50)
         

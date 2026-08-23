@@ -1,5 +1,6 @@
 import os
-import time 
+import time
+import re
 from dotenv import load_dotenv
 from groq import Groq
 
@@ -84,7 +85,9 @@ while True:
         duracion = fin - inicio
         
         # Mostramos la respuesta y el tiempo
-        print("IA:", respuesta.choices[0].message.content)
+        texto_respuesta = respuesta.choices[0].message.content
+        texto_respuesta_limpio = re.sub(r'<think>.*?</think>\n*', '', texto_respuesta, flags=re.DOTALL).strip()
+        print("IA:", texto_respuesta_limpio)
         print(f"\n⏱️ (Tiempo de respuesta: {duracion:.2f} segundos)")
         print("-" * 50) 
         
